@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="output" style="min-height: 125px;">
+
+    <ul>
+
+    </ul>
+
+    </div>
+
+    <!-- script -->
+    <script>
+    var list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+    for(var i = 0; i < cities.length; i++) {
+      var input = cities[i];
+      // write your code just below here
+      var lowerIT = input.toLowerCase();
+      var firstL = lowerIT.slice(0,1);
+      var proper = lowerIT.replace(firstL,firstL.toUpperCase());
+      var result = proper;
+      var listItem = document.createElement('li');
+      listItem.textContent = result;
+      list.appendChild(listItem);
+    }
+    </script>
+
+  </body>
+</html>
